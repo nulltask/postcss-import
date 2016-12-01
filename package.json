@@ -21,8 +21,6 @@
     "object-assign": "^4.0.1",
     "postcss": "^5.0.14",
     "postcss-value-parser": "^3.2.3",
-    "read-cache": "^1.0.0",
-    "request-promise": "^2.0.1",
     "resolve": "^1.1.7"
   },
   "devDependencies": {

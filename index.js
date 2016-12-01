@@ -3,17 +3,16 @@ var assign = require("object-assign")
 var postcss = require("postcss")
 var joinMedia = require("./lib/join-media")
 var resolveId = require("./lib/resolve-id")
-var loadContent = require("./lib/load-content")
 var parseStatements = require("./lib/parse-statements")
 var isRemote = require("./lib/is-remote")
 
 function AtImport(options) {
+  if (!('load' in options)) throw new Error('options.load is mandatory')
   options = assign({
     root: process.cwd(),
     path: [],
     skipDuplicates: true,
     resolve: resolveId,
-    load: loadContent,
     plugins: [],
   }, options)
 
